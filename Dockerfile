@@ -19,6 +19,6 @@ RUN javac Main.java
 
 # Expose port 8000 for the HTTP server
 EXPOSE 8000
-
+# just editing 
 # Run the Java application when the container starts
 CMD ["java", "Main"]

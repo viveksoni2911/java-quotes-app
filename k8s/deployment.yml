@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-quotes-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: java-quotes-app
+  template:
+    metadata:
+      labels:
+        app: java-quotes-app
+    spec:
+      containers:
+      - name: java-quotes-app
+        image: viveksoni0929/java-quotes-app:latest
+        ports:
+        - containerPort: 8000
